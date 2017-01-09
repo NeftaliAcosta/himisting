@@ -1,76 +1,36 @@
 $(document).ready(function(){
-(function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, 
-            i[r].l = 1 * new Date(); a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-        })
-        (window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-        ga('create', 'UA-75593110-1', 'auto');
-        ga('send', 'pageview');
-		
-		
-		
-		/*
-		
-		 function $_GET(param) {
-			url = document.URL;
-			url = String(url.match(/\?+.+/));
-			url = url.replace("?", "");
-			url = url.split("&");
-			x = 0;
-			while (x < url.length) {
-				p = url[x].split("=");
-				if (p[0] == param) {
-					return decodeURIComponent(p[1]);
-				}
-				x++;
-			}
-		}
-		
-		 var mysku =($_GET("sku")) ;
-		
-		 for(var v=1; v<=26; v++){
-			 var f = "producto".concat(v);
-			 if ((productos[f].sku)== mysku){
-				 $('#modtitulo').html(productos[f].modelo);
-				 $('#modimg').attr("src",productos[f].img);
-			     $('#modsubtitulo').html(productos[f].subtitulo);
-			     $('#modapp').html(productos[f].app);
-				 
-			     var detailcar = '';
-		  
-		  
-				for (var i=1; i<=(productos[f].nca); i++){
-					var x = "ca".concat(i);
-					detailcar = detailcar + (productos[f][x] + "<br/>");
-					
-					
-				}
-				$('#modca').html("<p>"+detailcar + "</p>");
-				var detailcontenido = '';
-				for (var r=1; r<=(productos[f].nco); r++){
-					var w = "co".concat(r);
-					detailcontenido = detailcontenido + ("<li>" + productos[f][w]+ "</li>");
-				}
-				$('#modcontenido').html(detailcontenido);
-			
-				if ((productos[f].nco)==0){
-					$('#titlecont').html('');
-				}else{
-					$('#titlecont').html('Contenido:');
-				}
-				
+	(function (i, s, o, g, r, a, m) {
+	    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+	        (i[r].q = i[r].q || []).push(arguments)
+	        	}, 
+	        i[r].l = 1 * new Date(); a = s.createElement(o),
+	        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+	    })
+	(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+	ga('create', 'UA-75593110-1', 'auto');
+	ga('send', 'pageview');
 
-	
-				$('#modproducto').modal('show');
-			 }
-			
-			
-		}
-		*/
-});
+	$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    lazyLoad:true,
+    autoplay:true,
+    autoplayTimeout:1000,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+	    }
+	})
+
+});/*Fin Document ready*/
 
 
 var infotec = {
