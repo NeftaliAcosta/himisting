@@ -9,75 +9,35 @@ $(document).ready(function(){
         (window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
         ga('create', 'UA-75593110-1', 'auto');
         ga('send', 'pageview');
-		
-		
-		
-		/*
-		
-		 function $_GET(param) {
-			url = document.URL;
-			url = String(url.match(/\?+.+/));
-			url = url.replace("?", "");
-			url = url.split("&");
-			x = 0;
-			while (x < url.length) {
-				p = url[x].split("=");
-				if (p[0] == param) {
-					return decodeURIComponent(p[1]);
-				}
-				x++;
-			}
-		}
-		
-		 var mysku =($_GET("sku")) ;
-		
-		 for(var v=1; v<=26; v++){
-			 var f = "producto".concat(v);
-			 if ((productos[f].sku)== mysku){
-				 $('#modtitulo').html(productos[f].modelo);
-				 $('#modimg').attr("src",productos[f].img);
-			     $('#modsubtitulo').html(productos[f].subtitulo);
-			     $('#modapp').html(productos[f].app);
-				 
-			     var detailcar = '';
-		  
-		  
-				for (var i=1; i<=(productos[f].nca); i++){
-					var x = "ca".concat(i);
-					detailcar = detailcar + (productos[f][x] + "<br/>");
-					
-					
-				}
-				$('#modca').html("<p>"+detailcar + "</p>");
-				var detailcontenido = '';
-				for (var r=1; r<=(productos[f].nco); r++){
-					var w = "co".concat(r);
-					detailcontenido = detailcontenido + ("<li>" + productos[f][w]+ "</li>");
-				}
-				$('#modcontenido').html(detailcontenido);
-			
-				if ((productos[f].nco)==0){
-					$('#titlecont').html('');
-				}else{
-					$('#titlecont').html('Contenido:');
-				}
-				
 
-	
-				$('#modproducto').modal('show');
-			 }
-			
-			
-		}
-		*/
-});
+	$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    lazyLoad:true,
+    autoplay:true,
+    autoplayTimeout:1000,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+	    }
+	});
+
+});/*Fin Document ready*/
 
 
 var infotec = {
     info1: {
         titulo: '<b>Climatización exterior</b>',
         texto: '<p>En <b>HI-MISTING</b> sabemos que disfrutas estar al aire libre, pasar un bello día de campo en familia, una comida con tus amigos o ese evento social tan esperado. Sabemos que para ti lo más importante es estar cómodo y tranquilo para poder disfrutar de momentos inolvidables, por ello, nos preocupamos por brindar confort a ti y a tus seres queridos.</p><p>Nuestros equipos son ideales para espacios abiertos como: jardines, parques de atracciones, campos de golf, hoteles, restaurantes, terrazas, eventos deportivos, musicales al aire libre, entre otros…</p>',
-        img: 'img/mosquitos.png',
+        img: 'img/climatizacion.png',
         
     },
 	
@@ -119,6 +79,7 @@ var productos = {
 				ca1:'<b>Capacidad:</b> 1 l/m',
 				ca2:'<b>Presión salida agua:</b> 900 psi',
 				ca3:'<b>Cobertura perimetral de enfrimaiento:</b> 20 mts',
+				ncoa:1,
 				nco:7,
 				co1:'1 Bomba alta presión',
 				co2:'25m de manguera nylon alta presión',
@@ -140,6 +101,7 @@ var productos = {
 				ca1:'<b>Capacidad:</b> 2 l/m',
 				ca2:'<b>Presión salida agua:</b> 900 psi',
 				ca3:'<b>Cobertura perimetral de enfrimaiento:</b> 40 mts',
+				ncoa:1,
 				nco:8,
 				co1:'1 Bomba alta presión',
 				co2:'50m de manguera nylon alta presión',
@@ -161,6 +123,7 @@ var productos = {
 				ca1:'<b>Capacidad:</b> 3 l/m',
 				ca2:'<b>Presión salida agua:</b> 900 psi',
 				ca3:'<b>Cobertura perimetral de enfrimaiento:</b> 60 mts',
+				ncoa:1,
 				nco:7,
 				co1:'1 Bomba alta presión',
 				co2:'10	0m de manguera nylon alta presión',
@@ -181,6 +144,7 @@ var productos = {
 				ca1:'<b>Capacidad:</b> l/m',
 				ca2:'<b>Presión salida agua:</b> 900 psi',
 				ca3:'<b>Cobertura perimetral de enfrimaiento:</b> 24 mts2',
+				ncoa:1,
 				nco:8,
 				co1:'1 Bomba alta presión',
 				co2:'1 abanico 18“ para exteriores',
@@ -202,6 +166,7 @@ var productos = {
 				ca1:'<b>Capacidad:</b> l/m',
 				ca2:'<b>Presión salida agua:</b> 900 psi',
 				ca3:'<b>Cobertura perimetral de enfrimaiento:</b> 48 mts2',
+				ncoa:1,
 				nco:9,
 				co1:'1 Bomba alta presión',
 				co2:'2 abanico 18“ para exteriores',
@@ -224,6 +189,7 @@ var productos = {
 				ca1:'<b>Capacidad:</b> l/m',
 				ca2:'<b>Presión salida agua:</b> 900 psi',
 				ca3:'<b>Cobertura perimetral de enfrimaiento:</b> 48 mts2',
+				ncoa:1,
 				nco:9,
 				co1:'1 Bomba alta presión',
 				co2:'4 abanico 18“ para exteriores',
@@ -246,6 +212,7 @@ var productos = {
 				ca1:'<b>Capacidad:</b> l/m',
 				ca2:'<b>Presión salida agua:</b> 900 psi',
 				ca3:'<b>Cobertura perimetral de enfrimaiento:</b> 24 mts2',
+				ncoa:1,
 				nco:6,
 				co1:'1 Bomba alta presión',
 				co2:'2m manguera entrada a Bomba',
@@ -253,7 +220,7 @@ var productos = {
 				co4:'4 boquillas de 0.15mm',
 				co5:'1 Aro(Ac. inox) p/4 porta-boquillas',
 				co6:'10 clamps para manguera.',
-				img: 'img/img_p_7.jpg',
+				img: 'img/img_conp_conv.jpg',
 				
 			},
 			producto8:{
@@ -265,6 +232,7 @@ var productos = {
 				ca1:'<b>Capacidad:</b> l/m',
 				ca2:'<b>Presión salida agua:</b> 900 psi',
 				ca3:'<b>Cobertura perimetral de enfrimaiento:</b> 44 mts2',
+				ncoa:1,
 				nco:8,
 				co1:'1 Bomba alta presión',
 				co2:'2m manguera entrada a Bomba',
@@ -274,7 +242,7 @@ var productos = {
 				co6:'2 Aro(Ac. inox) p/4 porta-boquillas',
 				co7:'20 clamps para manguera.',
 				co8:'1 conector "T" para manguera.',
-				img: 'img/img_p_7.jpg',
+				img: 'img/img_conp_conv.jpg',
 				
 			},
 			producto9:{
@@ -286,6 +254,7 @@ var productos = {
 				ca1:'<b>Capacidad:</b> l/m',
 				ca2:'<b>Presión salida agua:</b> 900 psi',
 				ca3:'<b>Cobertura perimetral de enfrimaiento:</b> 72 mts2',
+				ncoa:1,
 				nco:8,
 				co1:'1 Bomba alta presión',
 				co2:'2m manguera entrada a Bomba',
@@ -295,18 +264,19 @@ var productos = {
 				co6:'3 Aro(Ac. inox) p/4 porta-boquillas',
 				co7:'30 clamps para manguera.',
 				co8:'3 conector "T" para manguera.',
-				img: 'img/img_p_7.jpg',
+				img: 'img/img_conp_conv.jpg',
 				
 			},
-			producto10	:{
-				modelo:'<b>Producto:</b> Misting-MS3',
-				sku:'Misting-MS33',
+			producto10:{
+				modelo:'<b>Producto:</b> Misting-MS4',
+				sku:'Misting-MS4',
 				subtitulo:'Misting Alta presión con Preparación para Ventilación',
 				app:'Patios, restaurantes, terrazas, campos, etc. Cualquier lugar donde haya ventilación natural suficiente.',
 				nca:3,
 				ca1:'<b>Capacidad:</b> l/m',
 				ca2:'<b>Presión salida agua:</b> 900 psi',
 				ca3:'<b>Cobertura perimetral de enfrimaiento:</b> 96 mts2',
+				ncoa:1,
 				nco:8,
 				co1:'1 Bomba alta presión',
 				co2:'2m manguera entrada a Bomba',
@@ -316,7 +286,7 @@ var productos = {
 				co6:'4 Aro(Ac. inox) p/4 porta-boquillas',
 				co7:'40 clamps para manguera.',
 				co8:'4 conector "T" para manguera.',
-				img: 'img/img_p_7.jpg',
+				img: 'img/img_conp_conv.jpg',
 				
 			},
 		producto11	:{
@@ -332,6 +302,7 @@ var productos = {
 				ca5:'Acero Inoxidable',
 				ca6:'<b>Certificaciones:</b> CE',
 				ca7:'<b>Garantía:</b> 1 año2',
+				ncoa:1,
 				nco:3,
 				co1:'1 Bomba alta presión',
 				co2:'1 Valvula de escape automática',
@@ -352,6 +323,7 @@ var productos = {
 				ca5:'Acero Inoxidable',
 				ca6:'<b>Certificaciones:</b> CE',
 				ca7:'<b>Garantía:</b> 1 año2',
+				ncoa:1,
 				nco:3,
 				co1:'1 Bomba alta presión',
 				co2:'1 Valvula de escape automática',
@@ -372,6 +344,7 @@ var productos = {
 				ca5:'Acero Inoxidable',
 				ca6:'<b>Certificaciones:</b> CE',
 				ca7:'<b>Garantía:</b> 1 año2',
+				ncoa:1,
 				nco:3,
 				co1:'1 Bomba alta presión',
 				co2:'1 Valvula de escape automática',
@@ -389,8 +362,9 @@ var productos = {
 				ca2:'<bFlujo:</b> 0.03 l/m',
 				ca3:'<b>Material:</b> Metálico con area orificio Acero Inoxidable',
 				ca4: '<b>Presion trabajo normal:</b> 1000 psi2',
+				ncoa:0,
 				nco:0,
-				img: 'img/img_p_11.jpg',
+				img: 'img/bombahimisting.png',
 				
 			},
 			 producto15	:{
@@ -403,8 +377,9 @@ var productos = {
 				ca2:'<bFlujo:</b> 0.05 l/m',
 				ca3:'<b>Material:</b> Metálico con area orificio Acero Inoxidable',
 				ca4: '<b>Presion trabajo normal:</b> 1000 psi2',
+				ncoa:0,
 				nco:0,
-				img: 'img/img_p_11.jpg',
+				img: 'img/bombahimisting.png',
 				
 			},
 			producto16	:{
@@ -417,8 +392,9 @@ var productos = {
 				ca2:'<bFlujo:</b> 0.07 l/m',
 				ca3:'<b>Material:</b> Metálico con area orificio Acero Inoxidable',
 				ca4: '<b>Presion trabajo normal:</b> 1000 psi2',
+				ncoa:0,
 				nco:0,
-				img: 'img/img_p_11.jpg',
+				img: 'img/bombahimisting.png',
 				
 			},
 			producto17	:{
@@ -431,8 +407,9 @@ var productos = {
 				ca2:'<bFlujo:</b> 0.15 l/m',
 				ca3:'<b>Material:</b> Metálico con area orificio Acero Inoxidable',
 				ca4: '<b>Presion trabajo normal:</b> 1000 psi2',
+				ncoa:0,
 				nco:0,
-				img: 'img/img_p_11.jpg',
+				img: 'img/bombahimisting.png',
 				
 			},
 			producto18	:{
@@ -444,6 +421,7 @@ var productos = {
 				ca1:'Metálico',
 				ca2:'<bFlujo:</b> 0.15 l/m',
 				ca3:'Conector rápido Slip Lock para manguera de 3/8” para conectar 2 mangueras.',
+				ncoa:0,
 				nco:0,
 				img: 'img/bo_1.jpg',
 				
@@ -456,6 +434,7 @@ var productos = {
 				nca:2,
 				ca1:'Metálico',
 				ca2:'Conector rápido Slip Lock para manguera de 3/8” para conectar 2 mangueras.',
+				ncoa:0,
 				nco:0,
 				img: 'img/bo_2.jpg',
 				
@@ -468,6 +447,7 @@ var productos = {
 				nca:2,
 				ca1:'Metálico',
 				ca2:'Conector rápido Slip Lock para manguera de 3/8” para conectar 2 mangueras.',
+				ncoa:0,
 				nco:0,
 				img: 'img/bo_3.jpg',
 				
@@ -480,6 +460,7 @@ var productos = {
 				nca:2,
 				ca1:'Metálico',
 				ca2:'Conector rápido Slip Lock para manguera de 3/8” para conectar 2 mangueras.',
+				ncoa:0,
 				nco:0,
 				img: 'img/bo_4.jpg',
 				
@@ -492,6 +473,7 @@ var productos = {
 				nca:2,
 				ca1:'Metálico',
 				ca2:'Conector rápido en cruz Slip Lock para manguera de 3/8” para conexiones de manguera a 90o y -90o.',
+				ncoa:0,
 				nco:0,
 				img: 'img/bo_5.jpg',
 				
@@ -504,6 +486,7 @@ var productos = {
 				nca:2,
 				ca1:'Metálico',
 				ca2:'Conector macho rápido tipo Slip Lock para manguera 3/8 utilizado para conectar la salida de la bomba a la manguera de alta presión.',
+				ncoa:0,
 				nco:0,
 				img: 'img/bo_6.jpg',
 				
@@ -516,6 +499,7 @@ var productos = {
 				nca:2,
 				ca1:'Metálico',
 				ca2:'Conector rápido Slip Lock para manguera de 3/8” ',
+				ncoa:0,
 				nco:0,
 				img: 'img/bo_7.jpg',
 				
@@ -528,8 +512,130 @@ var productos = {
 				nca:2,
 				ca1:'Metálico',
 				ca2:'Conector rápido Slip Lock para manguera de 3/8” con orificio para boquilla.',
+				ncoa:0,
 				nco:0,
 				img: 'img/bo_8.jpg',
+				
+			},
+
+			/*Accesorios no tiene informacion*/
+			producto29:{
+				modelo:'<b>Producto:</b> Ventilador 360 de techo',
+				sku:'V-OF20',
+				subtitulo:'Modelo: V-OF20',
+				app:'Ventilador de techo Oscilatorio tipo industrial, con amplio flujo de aire, recomendable para: Restaurantes, Cocinas Industriales o cualquier lugar con la necesidad de tener un ambiente 100% ventilado.',
+				nca:7,
+				ca1:'Rejilla Reforzada',
+				ca2:'Aspa Color Negro Mate',
+				ca3:'Aspa metálica 20"',
+				ca4:'Control de pared',
+				ca5:'Velocidad ajustable',
+				ca6:'Oscilatorio',
+				ca7:'Garantía 1 año',
+				ncoa:0,
+				nco:1,
+				et:1,
+				etn:4,
+				e1:'127V~60Hz – 170W',
+				e2:'RPM: 1500',
+				e3:'Flujo de Aire: 170m3/min.',
+				e4:'Ruido Max: 75 dB (A) +-5',
+				img: 'img/ve1.png',
+				
+			},
+			producto30:{
+				modelo:'<b>Producto:</b> Ventilador de pared',
+				sku:'V-WF20',
+				subtitulo:'Modelo: V-WF20',
+				app:'Ventilador de techo Oscilatorio tipo industrial, con amplio flujo de aire, recomendable para: Restaurantes, Cocinas Industriales o cualquier lugar con la necesidad de tener un ambiente 100% ventilado.',
+				nca:7,
+				ca1:'Rejilla Reforzada',
+				ca2:'Aspa Color Negro Mate',
+				ca3:'Aspa metálica 20"',
+				ca4:'3 Velocidades',
+				ca5:'Ángulo ajustable',
+				ca6:'Oscilatorio',
+				ca7:'Garantía 1 año',
+				ncoa:0,
+				nco:1,
+				et:1,
+				etn:4,
+				e1:'127V~60Hz – 150W',
+				e2:'RPM: 1,550',
+				e3:'Flujo de Aire: 170m3/min.',
+				e4:'Ruido Max: 75 dB (A) +-5',
+				img: 'img/ve2.png',
+				
+			},
+			producto31:{
+				modelo:'<b>Producto:</b> Ventilador de pedestal',
+				sku:'V-SFB20N',
+				subtitulo:'Modelo: V-SFB20N',
+				app:'Ventilador de techo Oscilatorio tipo industrial, con amplio flujo de aire, recomendable para: Restaurantes, Cocinas Industriales o cualquier lugar con la necesidad de tener un ambiente 100% ventilado.',
+				nca:7,
+				ca1:'Rejilla Reforzada',
+				ca2:'Aspa Color Negro Mate',
+				ca3:'Aspa metálica 30"',
+				ca4:'3 Velocidades',
+				ca5:'Ángulo ajustable',
+				ca6:'Oscilatorio',
+				ca7:'Garantía 1 año',
+				ncoa:0,
+				nco:1,
+				et:1,
+				etn:4,
+				e1:'127V~60Hz – 390W',
+				e2:'RPM: 1600',
+				e3:'Flujo de Aire: 395m3/min.',
+				e4:'Ruido Max: 80 dB (A) +-5',
+				img: 'img/ve3.png',
+				
+			},
+			producto32:{
+				modelo:'<b>Producto:</b> Ventilador de piso',
+				sku:'V-HV20',
+				subtitulo:'Modelo: V-HV20',
+				app:'Ventilador de techo Oscilatorio tipo industrial, con amplio flujo de aire, recomendable para: Restaurantes, Cocinas Industriales o cualquier lugar con la necesidad de tener un ambiente 100% ventilado.',
+				nca:6,
+				ca1:'Rejilla Reforzada',
+				ca2:'Aspa Color Negro Mate',
+				ca3:'Aspa metálica 20"',
+				ca4:'3 Velocidades',
+				ca5:'Ángulo ajustable',
+				ca6:'Garantía 1 año',
+				ncoa:0,
+				nco:1,
+				et:1,
+				etn:4,
+				e1:'127V~60Hz – 160W',
+				e2:'RPM: 1550',
+				e3:'Flujo de Aire: 142m3/min.',
+				e4:'Ruido Max: 75 dB (A) +-5',
+				img: 'img/ve4.png',
+				
+			},
+			producto33:{
+				modelo:'<b>Producto:</b> Ventilador de pedestal',
+				sku:'V-PF30',
+				subtitulo:'Modelo: V-PF30',
+				app:'Ventilador de techo Oscilatorio tipo industrial, con amplio flujo de aire, recomendable para: Restaurantes, Cocinas Industriales o cualquier lugar con la necesidad de tener un ambiente 100% ventilado.',
+				nca:7,
+				ca1:'Rejilla Reforzada',
+				ca2:'Aspa Color Negro Mate',
+				ca3:'Aspa metálica 20"',
+				ca4:'3 Velocidades',
+				ca5:'Ángulo ajustable',
+				ca6:'Oscilatorio',
+				ca7:'Garantía 1 año',
+				ncoa:0,
+				nco:1,
+				et:1,
+				etn:4,
+				e1:'127V~60Hz – 180W',
+				e2:'RPM: 1500',
+				e3:'Flujo de Aire: 150m3/min.',
+				e4:'Ruido Max: 70 dB (A) +-5',
+				img: 'img/ve5.png',
 				
 			},
 		
@@ -580,11 +686,22 @@ $('.producto').click(function(){
 			}
 			$('#modcontenido').html(detailcontenido);
 			
-			if ((productos[nproducto].nco)==0){
-				$('#titlecont').html('');
-			}else{
+			if ((productos[nproducto].ncoa)==1){
 				$('#titlecont').html('Contenido:');
 			}
+			else if((productos[nproducto].et)==1){
+				$('#titlecont').html('<b>Especificaciones Técnicas:</b>');
+				var mycontent= '';
+				for (var l=1; l<=(productos[nproducto].etn); l++){
+					var ww = "e".concat(l);
+					mycontent = mycontent + ("<li>" + productos[nproducto][ww]+ "</li>");
+				}
+				$('#modcontenido').html(mycontent);
+			}
+			else if((productos[nproducto].et)==0){
+				$('#titlecont').html('');
+			}
+			
 			
 
 	
@@ -592,21 +709,7 @@ $('.producto').click(function(){
 	
 	});
 	
-	/*
-	$('#buscar').click(function(){
-		var busqueda = $('#txtbuscar').val();
-		alert(busqueda);
-		var conca = '/productos.html?sku=' + busqueda;
-		alert(conca);
 
-		
-		var dominio = document.domain;
-		
-		alert(param);
-		alert(dominio);
-		window.location.href= dominio + 'hi-misting'+conca;
-		
-	}); */
 	
 	$('#btnenviar').click(function(){
 		var Nombre = $('#nombre').val();

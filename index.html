@@ -1,6 +1,12 @@
 	<!DOCTYPE html>
+	<!--
+	Developer: Neftali Acosta
+	URL: https://neftaliacosta.com
+	Powered by: GubyNetwork
+	URL: https://gubynetwork.com
+	Todos los derechos reservados.
+	-->
 	<html lang="es-MX">
-
 	<head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,22 +18,29 @@
 	<meta name="keywords" content="Sistemas hi-misting, Misting System,Enfriamiento Evaporativo, Climatización para exteriores, Control de olores, barrera para insectos voladores,Conservación de perecederos por humidificación, Control de humedad,Control de humedad, soluciones invernaderos" />
 	<meta name="robots" content="index, follow" />
 	<meta name="organization" content="hi-misting" />
-
-
 	<link rel="icon" href="favicon.ico" type="image/x-icon" />
-	<!-- Versión compilada y comprimida del CSS de Bootstrap -->
+
+
+	<!-- Get css -->
 	<link rel="stylesheet" href="css/bootstrap.min.css" >
 	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" >
-	<link  rel="stylesheet" type="text/css" href="css/mycss.css" >
+	<link  rel="stylesheet" type="text/css" href="css/mycss.min.css" >
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 
+	<!-- get js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/myjs.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
 
 
 	</head>
 
 	<body>
 	  <header>
-		<div class="container ">
+		<div class="container-fluid">
 
 		  <!-- Static navbar -->
 		  <nav class="navbar navbar-default mynav">
@@ -45,21 +58,12 @@
 			  </div>
 			  <div id="navbar" class="navbar-collapse collapse pull-right mymenu">
 				<ul class="nav navbar-nav">
-				  <li class="active">  <a href="#">Inicio</a></li>
+				  <li class="active"><a href="index.html">Inicio</a></li>
 				  <li><a href="nosotros.html">Nosotros</a></li>
-				  <li><a href="informacion-tecnica.html">Información Ténica</a></li>
+				  <li><a href="aplicaciones.html">Aplicaciones</a></li>
 				  <li><a href="productos.html">Productos</a></li>
-				  <li><a href="descargas.html">Descargas</a></li>
+				  <li><a href="galeria.html">Galería</a></li>
 				  <li><a href="contacto.html">Contacto</a></li>
-				  <!--<li>
-					<form class="navbar-form navbar-left" role="search">
-						<div class="form-group">
-							<input type="text" class="form-control" id="txtbuscar" placeholder="Himisting-MK1">
-						</div>
-						<button  class="btn btn-default" id="buscar">Buscar</button>
-					</form>
-				  </li>-->
-
 				</ul>
 			  </div><!--/.nav-collapse -->
 			</div><!--/.container-fluid -->
@@ -68,7 +72,7 @@
 	  </header>
 	  
 	  
-	  <div class="container">
+	  <div class="container-fluid fixfluid">
 	  
 	  
 				   <!-- Carousel
@@ -82,22 +86,22 @@
 		  </ol>
 		  <div class="carousel-inner" role="listbox">
 			<div class="item active">
-			  <img class="first-slide" src="img/1.jpg" alt="First slide">
+			  <!--<video autoplay loop muted>
+                 <source src="media/vid1.mp4" width="1024" height="552" type="video/mp4">
+              </video>-->
+			  <img class="first-slide" src="img/11.jpg" alt="First slide">
 			  <div class="container">
 				<div class="carousel-caption ">
 				  <div class="mycaption"><h1>¡Disfruta del confort de la brisa Hi-Misting!</h1></div>
-				  <!--<p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-				  <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>-->
 				</div>
 			  </div>
 			</div>
 			<div class="item">
-			  <img class="second-slide" src="img/2.jpg" alt="Second slide">
+			  <img class="second-slide" src="img/22.jpg" alt="Second slide">
 			  <div class="container">
 				<div class="carousel-caption">
-				<div class="mycaption">  <h1>¡Hi-Misting los expertos en climatización exterior!</h1></div>
-				 <!-- <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-				  <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>-->
+				<div class="mycaption"><h1>¡Hi-Misting los expertos en climatización exterior!</h1></div>
+
 				</div>
 			  </div>
 			</div>
@@ -111,11 +115,11 @@
 			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 			<span class="sr-only">Next</span>
 		  </a>
-		</div><!-- /.carousel -->
+		</div><!--carousel -->
 
 		 
 
-		</div> <!-- /container -->
+		</div> <!--container -->
 		<br/><br/>
 		
 		<div class="container">
@@ -166,6 +170,38 @@
 			
 		</div>
 	<br>
+	<!--Clientes-->
+	<div class="container clientes">
+		<h2>Clientes Satisfechos</h2>
+		<!-- Set up your HTML -->
+		<div class="owl-carousel owl-theme">
+		    <div class="item"><img src="img/clientes/logo1.jpg" class="img-responsive"></div>
+		    <div class="item"><img src="img/clientes/logo2.jpg" class="img-responsive"></div>
+		    <div class="item"><img src="img/clientes/logo3.png" class="img-responsive"></div>
+		    <div class="item"><img src="img/clientes/logo4.png" class="img-responsive"></div>
+		    <div class="item"><img src="img/clientes/logo5.jpg" class="img-responsive"></div>
+		    <div class="item"><img src="img/clientes/logo6.png" class="img-responsive"></div>
+		    <div class="item"><img src="img/clientes/logo7.png" class="img-responsive"></div>
+		    <div class="item"><img src="img/clientes/logo8.jpg" class="img-responsive"></div>
+		    <div class="item"><img src="img/clientes/logo9.png" class="img-responsive"></div>
+		</div>
+	</div>
+
+	<!-- Call to action-->
+	<div class="container-fluid call">
+		<div class="container">
+			<h2>¿Necesitas más información?</h2>
+			<div class="row">
+				<div class="col-xs-12 col-sm-10">
+					<p>Contáctanos ahora mismo, uno de nuestros Asesores Comerciales te enviará la información
+					que necesitas a la brevedad. También puedes utilizar nuestro chat en línea, será un gusto atenderte.</p>
+				</div>
+				<div class="col-xs-12 col-sm-2">
+					<button><a href="contacto.html">CONTÁCTANOS</a></button>
+				</div>
+			</div>
+		</div>
+	</div>
 
 
 
@@ -201,9 +237,9 @@
 					  <ul class="munufooter">
 						<li><a href="index.html">Inicio</a></li>
 						<li><a href="nosotros.html">Nosotros</a></li>
-						<li><a href="informacion-tecnica.html">Informacion</a></li>
+						<li><a href="aplicaciones.html">Aplicaciones</a></li>
 						<li><a href="productos.html">Productos</a></li>
-						<li><a href="descargas.html">Descargas</a></li>
+						<li><a href="galeria.html">Galería</a></li>
 						<li><a href="contacto.html">Contacto</a></li>
 					  </ul>
 
@@ -224,7 +260,7 @@
 				</div>
 				<br/>
 				<div class="firma"><br/>
-					<p >hi-misting.com © 2016 | Powered by <a href="http://gubynetwork.com">GubyNetwork.com</a></p> 
+					<p>hi-misting.com © 2017 | Powered by <a href="https://gubynetwork.com"><b>GubyNetwork</b></a></p>
 				</div>
 			  </div>
 			
@@ -234,11 +270,22 @@
 			<!--Fin del Footer -->
 
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<!-- Versión compilada y comprimida del JavaScript de Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/myjs.js"></script>
-	
+
+	<!-- Chatra {literal} -->
+	<script>
+	 (function(d, w, c) {
+	 w.ChatraID = 'j3vm3iREnref2dxFo';
+	 var s = d.createElement('script');
+	 w[c] = w[c] || function() {
+	 (w[c].q = w[c].q || []).push(arguments);
+	 };
+	 s.async = true;
+	 s.src = (d.location.protocol === 'https:' ? 'https:': 'http:')
+	 + '//call.chatra.io/chatra.js';
+	 if (d.head) d.head.appendChild(s);
+	 })(document, window, 'Chatra');
+	</script>
+	<!-- /Chatra {/literal} -->
 	</body>
 
 
